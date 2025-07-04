@@ -40,14 +40,3 @@ def arctan(x, terms=11):
         sign = -1 if n % 2 else 1
         result += sign * power(x, 2 * n + 1) / (2 * n + 1)
     return result
-
-print("## SENO(X, n TERMINOS) ##")
-print(sin(2))
-
-print('\n')
-print("## COS(X, n TERMINOS) ##")
-print(cos(2))
-
-print('\n')
-print("## TAN(X) ##")
-print(tan(2))

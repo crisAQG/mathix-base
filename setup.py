@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 HERE = pathlib.Path(__file__).parent
 
-VERSION = '1.11'
+VERSION = '1.12'
 PACKAGE_NAME = 'mathix'
 AUTHOR = 'Cristian Quezada Gana'
 AUTHOR_EMAIL = 'cristian.aqg.music@gmail.com'

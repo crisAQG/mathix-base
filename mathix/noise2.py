@@ -11,11 +11,12 @@ class noise2:
         self.amplitude = amplitude
         self.seed = seed
         self.gradients = {}
+        self.rng = random(self.seed)
         if seed is not None:
-            random().randint(0, 10000)
+            self.rng.randint(0, 10000)
 
     def _generate_gradient(self, ix, iy):
-        angle = random().uniform(0, 2 * 3.141592653589793)
+        angle = self.rng.uniform(0, 2 * 3.141592653589793)
         return cos(angle), sin(angle)
 
     def _get_gradient(self, ix, iy):
@@ -70,8 +71,10 @@ class noise2:
             amplitude *= self.persistence
             frequency *= self.lacunarity
 
-        normalized = (total / max_value + 1) / 2
-        return normalized * self.amplitude
+        normalized = (total / max_value + 1) / 2  # [0, 1]
+        contrasted = (normalized - 0.5) * 1.8 + 0.5  # extiende hacia [~0.1, ~0.9]
+        contrasted = max(0.0, min(1.0, contrasted))  # clamp
+        return contrasted * self.amplitude
 
     def get_scaled(self, x, y, min_val, max_val):
         """

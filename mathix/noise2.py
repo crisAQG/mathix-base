@@ -73,3 +73,12 @@ class noise2:
         normalized = (total / max_value + 1) / 2
         return normalized * self.amplitude
 
+    def get_scaled(self, x, y, min_val, max_val):
+        """
+        Retorna el valor del ruido escalado a un rango definido.
+        Ej: get_scaled(x, y, 0.15, 0.85)
+        """
+        base_value = self.get(x, y)  # ya está entre [0, self.amplitude]
+        normalized = base_value / self.amplitude if self.amplitude != 0 else 0.5
+        return min_val + normalized * (max_val - min_val)
+

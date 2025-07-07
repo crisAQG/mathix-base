@@ -2,7 +2,7 @@
 
 Mathix es una librería modular y expandible de matemáticas y física, diseñada para proyectos educativos, científicos y de videojuegos (incluyendo el juego en proceso de creacion Proyect-Genesis). Incluye módulos para aritmética, física, aleatorización, geometría, inteligencia artificial y más.
 
-> **Versión actual:** `v1.01`
+> **Versión actual:** `v1.11`
 > **Autor:** Cristian Quezada Gana
 
 ---

@@ -1,5 +1,21 @@
-from mathix.arithmetic import *
+from mathix.m_arithmetic import *
 
+
+"""
+Trigonometria basada en series de Taylor,
+cada funcion es evaluada en radianes.
+
+El parametro terms en la mayoria de
+funciones representa la cantidad de
+terminos a evaluar en cada sumatoria
+para acercarce al valor real de 
+una operacion trigonometrica.
+
+Menores terminos => (respuesta mas rapida
+y menor exactitud).
+Mayores terminos => (respuesta mas lenta
+y mayor exactitud).
+"""
 
 def sin(x, terms=11):
     x %= 2 * 3.141592653589793
@@ -19,7 +35,8 @@ def cos(x, terms=12):
 
 def tan(x):
     c = cos(x)
-    if c == 0: raise ValueError("tan indefinido")
+    if abs(c) < 1e-15:
+        raise ValueError("tan indefinido cerca de cos(x)=0")
     return sin(x) / c
 
 def arcsin(x, terms=11):

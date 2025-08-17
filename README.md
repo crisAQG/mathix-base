@@ -2,14 +2,14 @@
 
 Mathix es una librería modular y expandible de matemáticas y física, diseñada para proyectos educativos, científicos y de videojuegos (incluyendo el juego en proceso de creacion Proyect-Genesis). Incluye módulos para aritmética, física, aleatorización, geometría, inteligencia artificial y más.
 
-> **Versión actual:** `v1.12`
+> **Versión actual:** `v1.2`
 > **Autor:** Cristian Quezada Gana
 
 ---
 
 ## 📦 Contenido por módulos
 
-### 1. arithmetic.py
+### 1. m_arithmetic.py
 
 #### Operaciones aritméticas generalizadas:
 
@@ -27,7 +27,7 @@ pow(base, exp) — potencia.
 
 sqrt(x) — raíz cuadrada (con aproximación iterativa).
 
-### 2. algebra.py
+### 2. m_algebra.py
 
 #### Operaciones algebraicas generalizadas:
 
@@ -39,7 +39,7 @@ solve\_quadratic(a, b, c) — solución de función cuadrática.
 
 simplify\_addition(expr) — simplificación de sumas en expresión.
 
-### 3. statistics.py
+### 3. m_statistics.py
 
 #### Estadística básica e intermedia:
 
@@ -53,7 +53,7 @@ variance(data) — varianza de un conjunto de datos.
 
 median(data) — mediana de un conjunto de datos.
 
-### 4. discrete\_probability.py
+### 4. m_discrete\_probability.py
 
 #### Probabilidades discretas:
 
@@ -61,7 +61,7 @@ combinations(n, r) — combinaciones de n elementos tomados de r en r.
 
 permutations(n, r) — permutaciones de n elementos tomados de r en r.
 
-### 5. geometry\_2d.py
+### 5. m_geometry2.py
 
 #### Geometría computacional:
 
@@ -77,7 +77,7 @@ line\_intersects(p1, p2, q1, q2) — determina si los segmentos p1-p2 y q1-q2 se
 
 point\_in\_polygon(point, polygon) — determina si un punto está dentro de un polígono (método ray casting).
 
-### 6. trigonometry.py
+### 6. m_trigonometry.py
 
 #### Trigonometría básica e intermedia (medida en radianes):
 
@@ -93,7 +93,7 @@ arccos(x) — arco-coseno de x.
 
 arctan(x) — arco-tangente de x.
 
-### 7. calculus.py
+### 7. m_calculus.py
 
 #### Conceptos de cálculo (límites, derivadas e integrales):
 
@@ -107,7 +107,7 @@ symbolic\_derivative(expr) — derivada simbólica de la función expr.
 
 symbolic\_integral(expr) — integral simbólica de la función expr.
 
-### 8. matrix.py
+### 8. m_matrix.py
 
 #### Operaciones de matrices bidimensionales:
 
@@ -121,9 +121,9 @@ matrix\_transpose(A) — matriz transpuesta.
 
 matrix\_determinant(A) — determinante de una matriz.
 
-### 9. random.py
+### 9. m_random.py
 
-#### Módulo random():
+#### Módulo m_random():
 
 random() — número flotante entre 0 y 1.
 
@@ -139,15 +139,15 @@ sample(seq, k) — retorna una lista con k elementos únicos aleatorios de una l
 
 choices(population, k, weights) — selecciona k elementos aleatorios con reemplazo. Soporta pesos personalizados.
 
-### 10. noise2.py
+### 10. m_noise2.py
 
-#### Módulo noise2():
+#### Módulo m_noise2():
 
 get(x, y) — retorna valores normalizados entre 0 y 1 en base a x e y, escalados por la amplitud.
 
-### 11. ai\_logic.py
+### 11. m_ai\_logic.py
 
-#### Módulo ai\_logic():
+#### Módulo m_ai\_logic():
 
 chase\_target(enemy\_pos, target\_pos, speed) — persecución.
 
@@ -157,17 +157,17 @@ patrol(waypoints, current\_index, position, speed) — patrullaje entre puntos.
 
 can\_see(pos\_a, pos\_b, max\_distance) — visión por rango.
 
-#### Módulo priority\_target\_ai():
+#### Módulo m_priority\_target\_ai():
 
 select\_target(visible\_targets) — lista de prioridades en tuplas a elegir.
 
 update\_priorities(new\_priorities) — permite reordenar prioridades en tiempo real.
 
-#### Módulo pathfinder():
+#### Módulo m_pathfinder():
 
 find\_path(start, goal) — deduce la ruta más corta en el mapa para recorrer.
 
-### 12. interpolation.py
+### 12. m_interpolation.py
 
 #### Interpolación y suavizado:
 
@@ -179,9 +179,9 @@ remap(in\_min, in\_max, out\_min, out\_max, value) — remapea value de un rango
 
 ease\_in/out (cuadrático y cúbico) — suavizado de animaciones o desplazamientos.
 
-### 13. physics\_2d.py
+### 13. m_physics2.py
 
-#### Módulo physics\_2d():
+#### Módulo m_physics2():
 
 apply\_gravity(velocity, gravity\_scale) — aplica gravedad escalada a un vector de velocidad.
 
@@ -194,6 +194,13 @@ bounce(velocity, normal, elasticity) — calcula el vector de rebote contra una 
 limit\_speed(velocity, max\_speed) — limita la magnitud de la velocidad al valor máximo permitido.
 
 handle\_piercing(projectile) — gestiona lógica de perforación del proyectil (atraviesa enemigos).
+
+
+### m_voronoi2.py:
+
+#### Módulo m_voronoi2():
+
+generate(values) — genera una matriz voronoi bidimensional donde cada value (lista) esta relacionado a un punto voronoi.
 
 ---
 

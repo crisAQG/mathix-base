@@ -1,4 +1,4 @@
-class physics_2d:
+class m_physics2:
     def __init__(self, gravity=(0, 0.5), friction=0.9):
         self.gravity = gravity
         self.friction = friction

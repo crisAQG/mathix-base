@@ -1,7 +1,7 @@
-class random:
+class m_random:
     def __init__(self, seed=None):
         if seed is None:
-            seed = id(object()) % 2 ** 31  # Genera una semilla semialeatoria
+            seed = id(object()) % 2 ** 32  # Genera una semilla semialeatoria
         self.seed = seed
         self.modulus = 2 ** 31
         self.a = 1103515245

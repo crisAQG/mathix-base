@@ -1,4 +1,4 @@
-from mathix.arithmetic import *
+from mathix.m_arithmetic import *
 
 
 def combinations(n, r):

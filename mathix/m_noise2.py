@@ -1,8 +1,8 @@
-from mathix.random import random
-from mathix.trigonometry import *
+from mathix.m_random import m_random
+from mathix.m_trigonometry import *
 
 
-class noise2:
+class m_noise2:
     def __init__(self, scale=70.0, octaves=3, persistence=0.5, lacunarity=2.0, amplitude=1.0, seed=None):
         self.scale = scale
         self.octaves = octaves
@@ -11,7 +11,7 @@ class noise2:
         self.amplitude = amplitude
         self.seed = seed
         self.gradients = {}
-        self.rng = random(self.seed)
+        self.rng = m_random(self.seed)
         if seed is not None:
             self.rng.randint(0, 10000)
 

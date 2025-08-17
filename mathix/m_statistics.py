@@ -1,5 +1,5 @@
-from mathix.discrete_probability import *
-from mathix.algebra import *
+from mathix.m_discrete_probability import *
+from mathix.m_algebra import *
 
 
 def binomial_probability(n, k, p):
